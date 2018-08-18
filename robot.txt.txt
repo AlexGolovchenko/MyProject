@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /auth.html
+Disallow: /rec.html
+Disallow: /err404.html
+Disallow: /JS/
+Disallow: /CSS/
+Disallow: /img/
+Disallow: /audio/
+Disallow: /video/

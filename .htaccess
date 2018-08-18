@@ -1,0 +1,7 @@
+DirectoryIndex index.php
+ErrorDocument 404 /err404.html
+
+AddType video/mp4  .mp4
+AddType video/webm  .webm
+
+AddType application/x-httpd-php5 .php .htm .html

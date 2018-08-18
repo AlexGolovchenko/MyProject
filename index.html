@@ -1,0 +1,222 @@
+<!-- подключаем файл с конфигурацией php -->
+<?php
+require "includes/db.php;";
+$connection = mysqli_connect('local', 'root', '', 'mysite_db');
+if ($connection == false)
+{
+  echo 'Не удалось подключиться к базе данных!';
+  echo mysqli_connect_error();
+  exit();
+}
+?>
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Сайт о событиях, которые происходят в мире. Тестовый сайт.">
+  <meta name="Keywords" content="Новости статья статьи инфо Спорт Путин Россия Культура Метро Страна ММА Хабиб Конор Макгрегор Нурмагомедов Футбол">
+  <!-- add css -->
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+
+  <link rel="shortcut icon" href="img/icon.png" type="image">
+  <meta name="viewport" content="width=device-width">
+  <title>MySite: Главная</title>
+
+</head>
+
+<body>
+
+  <!-- Шапка сайта -->
+  <header>
+    <a href="index.html" class="logo_img" title="На главную"><img class="main_img" src="img/icon.png" alt="Logo" title="На главную"></a>
+    <a href="index.html" class="logo_text" title="На главную">MySite</a>
+    <span class="right shadow"><a href="auth.html" title="Войти"> Вход </a></span>
+    <span class="right shadow"><a href="rec.html" title="Зарегистрироваться"> Регистрация </a></span>
+    <span id="center_2" class="right shadow"><a href="Contacts.html" title="Контактная информация"> Контакты </a></span>
+    <span id="center_1" class="right shadow"><a href="About.html" title="О проекте подробнее"> О нас </a></span>
+  </header>
+
+  <!-- ссылка на верх страницы с кнопки arrow -->
+  <a name="up"></a>
+  <!-- создадим пустое место под шапку-->
+  <div id="place"> </div>
+
+  <!-- задаем общий контейнер по центру сайта с фикс шириной 1366px -->
+  <div class="main_context_wrap">
+    <div class="clear"><br/></div>
+    <center>
+      <!-- меню с разделами -->
+
+      <menu>Разделы
+        <hr/>
+      </menu>
+      <div class="menu">
+        <a class="menu menu_section" href="index.html" title="Вернуться на главную">На главную</a>
+        <a class="menu menu_section" href="About.html" title="О проекте подробнее">О нас</a>
+        <a class="menu menu_section" href="Contacts.html" title="Контактная информация">Контакты</a>
+        <a class="menu menu_section" href="feedback.html" title="Обратная связь">Обратная связь</a>
+      </div>
+    </center>
+    <div id="wrapper">
+      <!--Создаем наши новостные ленты-->
+      <div class="articles">
+        <article>
+          <a href="article.html" title="Читать новости" class="a">
+          <img class="news" src="img/1.jpg" alt="MacBook Pro" title="IT индустрия">
+          </a>
+          <h2>Кибербезопасность</h2>
+          <p class="p"><a href="article.html#news_1" title="Читать новость" class="a_news">Злоумышленники пытаются использовать уязвимости процессоров [...]</a></p>
+          <p class="p"><a href="article.html#news_2" title="Читать новость" class="a_news">AMD Zen 2 не будет иметь уязвимостей Spectre [...]</a></p>
+          <div class="right_next"><a href="article.html" title="Читать далее" class="a">[Читать далее]</a></div>
+
+        </article>
+
+        <article>
+          <a href="article6.html" title="Читать далее " class="a ">
+          <img class="news " src="img/23.jpg " alt="Новости спорта " title="Cпорт ">
+          </a>
+          <h2>MMA</h2>
+          <p class="p "><a href="article6.html#news_1" title="Читать новость " class="a_news "> Хабиб vs Фергюсон: как это будет [...]</a></p>
+          <p class="p "><a href="article6.html#news_2" title="Читать новость " class="a_news "> Ронда Раузи: «Было время, когда я просто искала способ достойно уйти из UFC»[...] </a></p>
+          <div class="right_next "><a href="article6.html " title="Читать далее " class="a ">[Читать далее]</a></div>
+
+        </article>
+
+        <article class="up">
+          <a href="article7.html" title="Читать далее" class="a">
+          <img class="news" src="img/3.jpg" alt="Новости культуры" title="Культура">
+          </a>
+          <h2> Новости культуры </h2>
+          <p class="p"><a href="article7.html#news_1" title="Читать новость" class="a_news"> В московском метро запустили тематический поезд "Малый театр" [...]</a></p>
+          <p class="p"><a href="article7.html#news_2" title="Читать новость" class="a_news"> Владимир Путин призвал создать в регионах России сеть культурных центров [...]</a></p>
+          <div class="right_next"><a href="article7.html" title="Читать далее" class="a">[Читать далее]</a></div>
+        </article>
+      </div>
+    </div>
+  </div>
+
+  <!-- central block -->
+
+  <div id="main_soc_block">
+    <div id="main_soc_block_in">
+      <h3>Самые смешные слоганы в российской рекламе:</h3>
+      <p>«Цены низкие, как блины золотистые»</p>
+      <p>«Иногда лучше жевать, чем болтать»</p>
+      <p>«Он как я, только банк»</p>
+      <p class="button js-button">
+        <!--
+        <a href="confirm.html" title="Подписаться" class="a">
+           -->
+          <b>Подписывайся</b></a></p>
+    </div>
+  </div>
+
+  <!-- popup block -->
+  <div class="overlay js-overlay">
+    <div class="popup js-popup">
+      <blockquote>
+        <h2 class="about_h2">Приветствую, читатель! </h2> <br>
+        <p>После подтверждения откроется неограниченный доступ к информационному порталу, а так же появится возможность участвовать в акциях и розыгрышах. Следи за новостями вместе с нами!</p><br>
+        <p class="p"><a id="confirm" class="a_news" href="index.html" title="Подтверждение подписки">Подтвердить подписку </a></p>
+      </blockquote>
+      <div class="close-popup js-close"></div>
+    </div>
+  </div>
+
+  <div class="main_context_wrap">
+    <div id="wrapper">
+      <!--Создаем наши новостные ленты-->
+      <div class="articles">
+        <article>
+          <a href="article3.html" title="Читать далее" class="a">
+          <img class="news" src="img/4.jpg" alt="Биткоин" title="Экономика">
+          </a>
+          <h2> Новости Экономики </h2>
+          <p class="p"><a href="article3.html#news_1" title="Читать новость" class="a_news">Российский рынок видеокарт: цены бьют рекорды [...]</a></p>
+
+          <p class="p"><a href="article3.html#news_2" title="Читать новость" class="a_news">Electroneum станет первой криптовалютой [...]</a></p>
+          <div class="right_next"><a href="article3.html" title="Читать далее" class="a">[Читать далее]</a></div>
+
+        </article>
+
+
+        <article>
+          <a href="article5.html" title="Читать далее" class="a">
+          <img class="news" src="img/7.jpg" alt="Новости спорта" title="Cпорт">
+          </a>
+          <h2>Футбол</h2>
+          <p class="p"><a href="article5.html#news_1" title="Читать новость" class="a_news">В «Зените» пообещали «всех рвать» [...]</a></p>
+          <p class="p"><a href="article5.html#news_2" title="Читать новость" class="a_news"> Де Хеа попросил руководство «Манчестер Юнайтед» продать его в «Реал» [...]</a></p>
+          <div class="right_next"><a href="article5.html" title="Читать далее" class="a">[Читать далее]</a></div>
+
+        </article>
+        <article>
+          <a href="article8.html" title="Читать далее" class="a"><img class="news" src="img/39.jpg" alt="Механическая рыба-робот" title="Наука"></a>
+          <h2>Наука</h2>
+          <p class="p"><a href="article8.html#news_1" title="Читать новость" class="a_news">Ученые создали рыбу-робота для изучения подводного мира [...]</a></p>
+          <p class="p"><a href="article8.html#news_2" title="Читать новость" class="a_news"> Ученые открыли новую форму света [...]</a></p>
+          <div class="right_next"><a href="article8.html" title="Читать далее" class="a">[Читать далее]</a></div>
+        </article>
+
+        <article>
+          <a href="article2.html" title="Читать далее" class="a"><img class="news" src="img/5.jpg" alt="IT индустрия" title="IT индустрия"></a>
+          <h2>Новости IT-индустрии</h2>
+          <p class="p"><a href="article2.html#news_1" title="Читать новость" class="a_news">Nougat стала самой популярной версией Android [...]</a></p>
+          <p class="p">
+            <a href="article2.html#news_2" title="Читать новость" class="a_news ">Samsung принимает заказы от производителей систем-майнеров [...]</a></p>
+          <div class="right_next "><a href="article2.html " title="Читать далее " class="a ">[Читать далее]</a></div>
+        </article>
+
+        <article>
+          <a href="article4.html" title="Читать далее" class="a">
+          <img class="news" src="img/2.jpg" alt="Новости спорта" title="Cпорт">
+          </a>
+          <h2>Биатлон</h2>
+          <p class="p"><a href="article4.html#news_1" title="Читать новость" class="a_news"> Тренер Гросс сменит сборную России по биатлону на австрийскую команду [...]</a></p>
+          <p class="p"><a href="article4.html#news_2" title="Читать новость" class="a_news"> Чемпионка мира Юрьева рассказала об основной проблеме в российском биатлоне [...]</a></p>
+          <div class="right_next"><a href="article4.html" title="Читать далее" class="a">[Читать далее]</a></div>
+
+        </article>
+
+        <article>
+          <a href="article9.html" title="Читать далее " class="a "><img class="news " src="img/6.jpeg " alt="Карта России на красивом фоне " title="Наша страна "></a>
+          <h2>Наша страна</h2>
+          <p class="p"><a href="article9.html#news_1" title="Читать новость" class="a_news"> ЦИК опубликовал проект постановления по итогам выборов 2018 [...]</a></p>
+          <p class="p "><a href="article9.html#news_2" title="Читать новость " class="a_news ">Главные праздники и события в Москве в 2018 году [...]</a></p>
+          <div class="right_next "><a href="article9.html " title="Читать далее" class="a ">[Читать далее]</a></div>
+        </article>
+
+      </div>
+      <!-- тот что articles -->
+    </div>
+    <!-- тот что main_context_wrap -->
+  </div>
+
+  <!-- подвал сайта -->
+  <footer>
+<!-- выносим влево -->
+    <div class="left ">
+      Все права защищены &copy; 2018
+    </div>
+    <!-- соц кнопки -->
+    <div class="soc">
+      <a class="m button_e-mail" href="mailto:internet-group@rian.ru" rel="nofollow" alt="E-mail" title="Отправить письмо"></a>
+      <a class="m button_vk" href="https://vk.com/ria " target="_blank" rel="nofollow" alt="VK" title="Мы Вконтакте"></a>
+      <a class="m button_facebook" href="https://www.facebook.com/rianru/ " target="_blank" rel="nofollow" alt="Facebook" title="Наш Facebook"></a>
+      <a href="https://www.google.ru/search?newwindow=1&rlz=1C1OKWM_ruRU773RU773&ei=NCJ_WqiaGYS3sQGei7mwCg&q=%D1%80%D0%B8%D0%B0+%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8&oq=%D1%80%D0%B8%D0%B0+%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8&gs_l=psy-ab.3...0.0.0.9677.0.0.0.0.0.0.0.0..0.0....0...1c..64.psy-ab..0.0.0....0.w6hF2R8xeHw
+            " target="_blank" rel="nofollow" class="m button_google" alt="Google" title="Глобальный поиск"></a>
+    </div>
+
+  </footer>
+  <!-- prefix library -> useless with koala
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js" ></script> -->
+  <!-- add jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <!-- add js -->
+  <script defer src="js/index.js"></script>
+
+</body>
+
+</html>

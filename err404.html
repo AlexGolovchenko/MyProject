@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+    <!-- add js to here-->
+
+  <link rel="shortcut icon" href="img/icon.png" type="image">
+
+  <meta name="viewport" content="width=device-width">
+  <title>My site: Eror 404</title>
+</head>
+
+<body>
+
+  <!-- Шапка сайта -->
+  <header>
+    <a href="index.html" class="logo_img" title="На главную"><img class="main_img" src="img/icon.png" alt="Logo" title="На главную"></a>
+    <a href="index.html" class="logo_text error404" title="На главную">MySite</a>
+    <span class="right shadow"><a href="auth.html" title="Войти"> Вход </a></span>
+    <span class="right shadow"><a href="rec.html" title="Зарегистрироваться"> Регистрация </a></span>
+    <span id="center_2" class="right shadow"><a href="Contacts.html" title="Контактная информация"> Контакты </a></span>
+    <span id="center_1" class="right shadow"><a href="About.html" title="О проекте подробнее"> О нас </a></span>
+  </header>
+
+  <!-- создадим место под шапку -->
+  <div id="place"> </div>
+  <!-- задаем общий контейнер по центру сайта с фикс шириной 1366px -->
+  <div class="main_context_wrap">
+    <!-- блок для текста -->
+    <div class="about_us error404">
+      <!-- воруем общие настройки текста с др стр -->
+      <blockquote>
+        <h2 class="about_h2 error404">Возможно, вы ошиблись ссылкой и страница не была найдена  <span class="rotate"> ):</span> </h2>
+<h2 class="about_h2 error404">Но вы можете перейти на Главную страницу, кликнув по ссылке в левом углу :)</h2>
+  <h2 class="about_h2 error404">Оставайтесь с нами, у нас есть печеньки ;)</h2>
+      </blockquote>
+      <!-- музыка из ГП -->
+      <audio id="musicErr"class="audio" autoplay loop controls volume:"-500" preload:"auto" src="audio/GP.mp3" type="audio/mp3"></audio>
+    </div>
+  </div>
+
+    <!-- подвал сайта -->
+    <footer>
+  <!-- выносим влево -->
+      <div class="left ">
+        Все права защищены &copy; 2018
+      </div>
+      <!-- соц кнопки -->
+      <div class="soc">
+        <a class="m button_e-mail" href="mailto:internet-group@rian.ru" rel="nofollow" alt="E-mail" title="Отправить письмо"></a>
+        <a class="m button_vk" href="https://vk.com/ria " target="_blank" rel="nofollow" alt="VK" title="Мы Вконтакте"></a>
+        <a class="m button_facebook" href="https://www.facebook.com/rianru/ " target="_blank" rel="nofollow" alt="Facebook" title="Наш Facebook"></a>
+        <a href="https://www.google.ru/search?newwindow=1&rlz=1C1OKWM_ruRU773RU773&ei=NCJ_WqiaGYS3sQGei7mwCg&q=%D1%80%D0%B8%D0%B0+%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8&oq=%D1%80%D0%B8%D0%B0+%D0%BD%D0%BE%D0%B2%D0%BE%D1%81%D1%82%D0%B8&gs_l=psy-ab.3...0.0.0.9677.0.0.0.0.0.0.0.0..0.0....0...1c..64.psy-ab..0.0.0....0.w6hF2R8xeHw
+              " target="_blank" rel="nofollow" class="m button_google" alt="Google" title="Глобальный поиск"></a>
+      </div>
+
+    </footer>
+      <script defer src="js/err404.js"></script>
+    <!-- библиотека для префиксов различных браузеров -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js" ></script>
+</body>
+
+</html>
