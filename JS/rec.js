@@ -9,9 +9,9 @@ function valid() {
         emailReg = /[0-9a-zа-я-_.]+@[0-9a-zа-я.]+\.[a-zа-я]{2,6}/i,
         password = form.password.value,
         passwordReg = /[0-9a-zа-я]{2,15}/i,
-        repassword = form.repassword.value;
-    sex = form.sex.value;
-    check = document.querySelector("#checkbox").checked;
+        repassword = form.repassword.value,
+        sex = form.sex.value,
+        check = document.querySelector("#checkbox").checked;
 
     if (!subject) {
         alert(`Введите свое имя.`)
