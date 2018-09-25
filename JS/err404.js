@@ -1,3 +1,3 @@
-//volume 20%
-myVid=document.getElementById("musicErr");
-myVid.volume=0.2;
+//music volume 20%
+const myVid = document.querySelector("#musicErr");
+myVid.volume = 0.2;
